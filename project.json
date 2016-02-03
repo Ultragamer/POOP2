@@ -1,0 +1,10 @@
+{
+    "name": "POOP2",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "POOP2.xml",
+    "author": "Ultragamer",
+    "minimum_firmware_version": 42
+}
