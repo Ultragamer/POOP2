@@ -5,22 +5,31 @@
       <block type="logic_compare" id="2" inline="true">
         <field name="OP">GT</field>
         <value name="A">
-          <block type="sensor_spectrometer" id="226">
+          <block type="sensor_spectrometer" id="3">
             <field name="LIGHT">BLUE</field>
           </block>
         </value>
         <value name="B">
-          <block type="math_number" id="10">
-            <field name="NUM">50</field>
+          <block type="math_number" id="4">
+            <field name="NUM">65</field>
           </block>
         </value>
       </block>
     </value>
     <statement name="DO0">
-      <block type="movement_forward" id="39"></block>
+      <block type="oled_drawnumber" id="85" inline="true">
+        <value name="NUMBER">
+          <block type="sensor_spectrometer" id="70">
+            <field name="LIGHT">BLUE</field>
+          </block>
+        </value>
+        <next>
+          <block type="movement_forward" id="5"></block>
+        </next>
+      </block>
     </statement>
     <statement name="ELSE">
-      <block type="movement_stop" id="94"></block>
+      <block type="movement_stop" id="6"></block>
     </statement>
   </block>
 </xml>
