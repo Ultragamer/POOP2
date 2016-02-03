@@ -4,7 +4,7 @@
       <block type="controls_whileUntil" id="121" inline="false">
         <field name="MODE">UNTIL</field>
         <value name="NUMBER">
-          <block type="sensor_button" id="171">
+          <block type="sensor_button" id="197">
             <field name="OBJECT">UP</field>
           </block>
         </value>
@@ -15,34 +15,34 @@
                 <field name="LIGHT">BLUE</field>
               </block>
             </value>
+            <next>
+              <block type="controls_if" id="1" inline="false">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="2" inline="true">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="sensor_spectrometer" id="3">
+                        <field name="LIGHT">BLUE</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="4">
+                        <field name="NUM">65</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_forward" id="5"></block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="movement_stop" id="6"></block>
+                </statement>
+              </block>
+            </next>
           </block>
         </statement>
-        <next>
-          <block type="controls_if" id="1" inline="false">
-            <mutation else="1"></mutation>
-            <value name="IF0">
-              <block type="logic_compare" id="2" inline="true">
-                <field name="OP">GT</field>
-                <value name="A">
-                  <block type="sensor_spectrometer" id="3">
-                    <field name="LIGHT">BLUE</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="4">
-                    <field name="NUM">65</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <statement name="DO0">
-              <block type="movement_forward" id="5"></block>
-            </statement>
-            <statement name="ELSE">
-              <block type="movement_stop" id="6"></block>
-            </statement>
-          </block>
-        </next>
       </block>
     </next>
   </block>
