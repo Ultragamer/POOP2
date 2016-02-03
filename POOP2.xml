@@ -1,1 +1,26 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_if" id="1" inline="false" x="19" y="3">
+    <mutation else="1"></mutation>
+    <value name="IF0">
+      <block type="logic_compare" id="2" inline="true">
+        <field name="OP">GT</field>
+        <value name="A">
+          <block type="math_number" id="9">
+            <field name="NUM">50</field>
+          </block>
+        </value>
+        <value name="B">
+          <block type="math_number" id="10">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="DO0">
+      <block type="movement_forward" id="39"></block>
+    </statement>
+    <statement name="ELSE">
+      <block type="movement_stop" id="94"></block>
+    </statement>
+  </block>
+</xml>
