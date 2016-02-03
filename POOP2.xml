@@ -1,43 +1,43 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="oled_cleardisplay" id="180" x="48" y="-73">
+  <block type="oled_cleardisplay" id="1" x="48" y="-73">
     <next>
-      <block type="controls_whileUntil" id="121" inline="false">
+      <block type="controls_whileUntil" id="2" inline="false">
         <field name="MODE">UNTIL</field>
         <value name="NUMBER">
-          <block type="sensor_button" id="197">
+          <block type="sensor_button" id="3">
             <field name="OBJECT">UP</field>
           </block>
         </value>
         <statement name="DO">
-          <block type="oled_drawnumber" id="85" inline="true">
+          <block type="oled_drawnumber" id="4" inline="true">
             <value name="NUMBER">
-              <block type="sensor_spectrometer" id="70">
+              <block type="sensor_spectrometer" id="5">
                 <field name="LIGHT">BLUE</field>
               </block>
             </value>
             <next>
-              <block type="controls_if" id="1" inline="false">
+              <block type="controls_if" id="6" inline="false">
                 <mutation else="1"></mutation>
                 <value name="IF0">
-                  <block type="logic_compare" id="2" inline="true">
+                  <block type="logic_compare" id="7" inline="true">
                     <field name="OP">LT</field>
                     <value name="A">
-                      <block type="sensor_spectrometer" id="3">
+                      <block type="sensor_spectrometer" id="8">
                         <field name="LIGHT">BLUE</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="4">
-                        <field name="NUM">65</field>
+                      <block type="math_number" id="9">
+                        <field name="NUM">80</field>
                       </block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="movement_forward" id="5"></block>
+                  <block type="movement_forward" id="10"></block>
                 </statement>
                 <statement name="ELSE">
-                  <block type="movement_stop" id="6"></block>
+                  <block type="movement_stop" id="11"></block>
                 </statement>
               </block>
             </next>
