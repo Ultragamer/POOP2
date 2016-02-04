@@ -1,13 +1,13 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="2" inline="false" x="98" y="-19">
+  <block type="controls_whileUntil" id="1" inline="false" x="98" y="-19">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="3">
+      <block type="sensor_button" id="2">
         <field name="OBJECT">UP</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="oled_cleardisplay" id="1">
+      <block type="oled_cleardisplay" id="3">
         <next>
           <block type="oled_drawnumber" id="4" inline="true">
             <value name="NUMBER">
