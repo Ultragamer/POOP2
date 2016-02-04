@@ -39,13 +39,7 @@
                 <statement name="ELSE">
                   <block type="movement_right" id="155">
                     <next>
-                      <block type="robot_delay" id="215" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="219">
-                            <field name="NUM">10</field>
-                          </block>
-                        </value>
-                      </block>
+                      <block type="movement_stop" id="244"></block>
                     </next>
                   </block>
                 </statement>
