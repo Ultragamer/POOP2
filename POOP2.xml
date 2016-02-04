@@ -17,7 +17,7 @@
             </value>
             <next>
               <block type="controls_if" id="6" inline="false">
-                <mutation elseif="1" else="1"></mutation>
+                <mutation else="1"></mutation>
                 <value name="IF0">
                   <block type="logic_compare" id="7" inline="true">
                     <field name="OP">LT</field>
@@ -36,26 +36,8 @@
                 <statement name="DO0">
                   <block type="movement_forward" id="10"></block>
                 </statement>
-                <value name="IF1">
-                  <block type="logic_compare" id="18" inline="true">
-                    <field name="OP">GT</field>
-                    <value name="A">
-                      <block type="sensor_spectrometer" id="19">
-                        <field name="LIGHT">YELLOW</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="math_number" id="20">
-                        <field name="NUM">48</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO1">
-                  <block type="movement_left" id="31"></block>
-                </statement>
                 <statement name="ELSE">
-                  <block type="movement_right" id="65"></block>
+                  <block type="movement_right" id="155"></block>
                 </statement>
               </block>
             </next>
@@ -64,4 +46,5 @@
       </block>
     </statement>
   </block>
+  <block type="movement_left" id="145" x="-104" y="110"></block>
 </xml>
