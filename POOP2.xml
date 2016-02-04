@@ -37,7 +37,17 @@
                   <block type="movement_forward" id="10"></block>
                 </statement>
                 <statement name="ELSE">
-                  <block type="movement_right" id="155"></block>
+                  <block type="movement_right" id="155">
+                    <next>
+                      <block type="robot_delay" id="215" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="219">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
                 </statement>
               </block>
             </next>
