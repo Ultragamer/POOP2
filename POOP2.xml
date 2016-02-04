@@ -37,6 +37,7 @@
                 </statement>
                 <next>
                   <block type="controls_if" id="11" inline="false">
+                    <mutation elseif="1"></mutation>
                     <value name="IF0">
                       <block type="logic_compare" id="12" inline="true">
                         <field name="OP">GT</field>
@@ -63,6 +64,37 @@
                             </value>
                             <next>
                               <block type="movement_stop" id="18"></block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="25" inline="true">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="sensor_spectrometer" id="26">
+                            <field name="LIGHT">YELLOW</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="27">
+                            <field name="NUM">47</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="movement_right" id="37">
+                        <next>
+                          <block type="robot_delay" id="38" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="39">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="42"></block>
                             </next>
                           </block>
                         </next>
