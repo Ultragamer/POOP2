@@ -36,33 +36,33 @@
                   <block type="movement_forward" id="10"></block>
                 </statement>
                 <next>
-                  <block type="controls_if" id="305" inline="false">
+                  <block type="controls_if" id="11" inline="false">
                     <value name="IF0">
-                      <block type="logic_compare" id="306" inline="true">
+                      <block type="logic_compare" id="12" inline="true">
                         <field name="OP">GT</field>
                         <value name="A">
-                          <block type="sensor_spectrometer" id="307">
+                          <block type="sensor_spectrometer" id="13">
                             <field name="LIGHT">YELLOW</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="math_number" id="308">
+                          <block type="math_number" id="14">
                             <field name="NUM">48</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_right" id="155">
+                      <block type="movement_right" id="15">
                         <next>
-                          <block type="robot_delay" id="267" inline="true">
+                          <block type="robot_delay" id="16" inline="true">
                             <value name="DELAY">
-                              <block type="math_number" id="268">
+                              <block type="math_number" id="17">
                                 <field name="NUM">100</field>
                               </block>
                             </value>
                             <next>
-                              <block type="movement_stop" id="244"></block>
+                              <block type="movement_stop" id="18"></block>
                             </next>
                           </block>
                         </next>
