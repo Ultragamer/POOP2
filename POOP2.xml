@@ -3,7 +3,7 @@
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="2">
-        <field name="OBJECT">UP</field>
+        <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
@@ -17,7 +17,6 @@
             </value>
             <next>
               <block type="controls_if" id="6" inline="false">
-                <mutation else="1"></mutation>
                 <value name="IF0">
                   <block type="logic_compare" id="7" inline="true">
                     <field name="OP">LT</field>
@@ -36,22 +35,41 @@
                 <statement name="DO0">
                   <block type="movement_forward" id="10"></block>
                 </statement>
-                <statement name="ELSE">
-                  <block type="movement_right" id="155">
-                    <next>
-                      <block type="robot_delay" id="267" inline="true">
-                        <value name="DELAY">
-                          <block type="math_number" id="268">
-                            <field name="NUM">100</field>
+                <next>
+                  <block type="controls_if" id="305" inline="false">
+                    <value name="IF0">
+                      <block type="logic_compare" id="306" inline="true">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="sensor_spectrometer" id="307">
+                            <field name="LIGHT">YELLOW</field>
                           </block>
                         </value>
+                        <value name="B">
+                          <block type="math_number" id="308">
+                            <field name="NUM">48</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="movement_right" id="155">
                         <next>
-                          <block type="movement_stop" id="244"></block>
+                          <block type="robot_delay" id="267" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="268">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="movement_stop" id="244"></block>
+                            </next>
+                          </block>
                         </next>
                       </block>
-                    </next>
+                    </statement>
                   </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
