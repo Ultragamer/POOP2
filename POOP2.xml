@@ -64,7 +64,7 @@
                 </statement>
                 <value name="IF1">
                   <block type="logic_compare" id="19" inline="true">
-                    <field name="OP">LT</field>
+                    <field name="OP">NEQ</field>
                     <value name="A">
                       <block type="sensor_spectrometer" id="20">
                         <field name="LIGHT">YELLOW</field>
